@@ -56,7 +56,7 @@
               <button class="btn bg-lime-300">Blog</button>
             </div>
           </div>
-          <div class="md:navbar-center space-x-3">
+          <div class="navbar-center space-x-3">
             <div>
               <img src="assets/logo.png" alt="" class="mx-auto" />
             </div>
@@ -80,7 +80,7 @@
       </nav>
       <!-- navbar end -->
     </header>
-    <main class="max-w-screen-xl mx-auto space-y-20 p-10 lg:p-0">
+    <main class="container mx-auto space-y-20 p-10 lg:p-0">
       <!-- donation container -->
       <div id="donation-container" class="space-y-20">
         <!-- donation container 1-->
@@ -117,7 +117,13 @@
                 placeholder="Write your donation"
               />
             </fieldset>
-            <button class="btn bg-lime-300 w-full">Donate Now</button>
+            <button
+              onclick="handleDonate(this); my_modal_1.showModal()"
+              id="donate-button"
+              class="btn bg-lime-300 w-full"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
         <!-- donation container 2-->
@@ -156,7 +162,13 @@
                 placeholder="Write your donation"
               />
             </fieldset>
-            <button class="btn bg-lime-300 w-full">Donate Now</button>
+            <button
+              onclick="handleDonate(this); my_modal_1.showModal()"
+              id="donate-button"
+              class="btn bg-lime-300 w-full"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
         <!-- donation container 3-->
@@ -196,17 +208,20 @@
                 placeholder="Write your donation"
               />
             </fieldset>
-            <button class="btn bg-lime-300 w-full">Donate Now</button>
+            <button
+              onclick="handleDonate(this); my_modal_1.showModal()"
+              id="donate-button"
+              class="btn bg-lime-300 w-full"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
       </div>
       <!-- history container -->
       <div id="history-container" class="hidden"></div>
       <!-- blog container -->
-      <div
-        id="blog-container"
-        class="hidden max-w-screen-lg mx-auto space-y-5 my-10"
-      >
+      <div id="blog-container" class="hidden space-y-5 my-10">
         <div
           tabindex="0"
           class="collapse collapse-arrow bg-base-100 border-base-300 border"
@@ -253,7 +268,24 @@
           </div>
         </div>
       </div>
+      <!-- Open the modal using ID.showModal() method -->
+
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Congratulations!</h3>
+          <p class="py-4">Donation Complete</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer></footer>
+
+    <script src="JS/utilities.js"></script>
+    <script src="JS/index.js"></script>
   </body>
 </html>
