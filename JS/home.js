@@ -18,15 +18,21 @@ function handleDonate(data) {
             donated.innerText = totalDonation;
             const presentBalance = donationBalance - donationAmount;
             balance.innerText = presentBalance;
+            document.getElementById("donation-button").style.backgroundColor = "";
+            const presentTime = new Date();
+            const historyContainer = document.getElementById("history-container")
+            const div = document.createElement('div')
+            div.innerHTML = `<div class="bg-slate-50 shadow-md rounded-md p-10"'>
+            <p>You have donated ${donationAmount} tk</p>
+            <p class="text-sm">${presentTime}</p>
+            </div>
+            
+            `
+            historyContainer.appendChild(div)
             return my_modal_3.showModal();
         }
     }
 
 }
-// blog button features
-function handleDonation(data) {
-    displayHide("donation-container")
-    data.style.backgroundColor = "#B4F461"
-    document.getElementById("history-button").style.backgroundColor = "";
-}
+
 
