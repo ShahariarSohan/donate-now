@@ -118,7 +118,7 @@
               />
             </fieldset>
             <button
-              onclick="handleDonate(this); my_modal_1.showModal()"
+              onclick="handleDonate(this)"
               id="donate-button"
               class="btn bg-lime-300 w-full"
             >
@@ -163,7 +163,7 @@
               />
             </fieldset>
             <button
-              onclick="handleDonate(this); my_modal_1.showModal()"
+              onclick="handleDonate(this)"
               id="donate-button"
               class="btn bg-lime-300 w-full"
             >
@@ -209,7 +209,7 @@
               />
             </fieldset>
             <button
-              onclick="handleDonate(this); my_modal_1.showModal()"
+              onclick="handleDonate(this)"
               id="donate-button"
               class="btn bg-lime-300 w-full"
             >
@@ -269,11 +269,24 @@
         </div>
       </div>
       <!-- Open the modal using ID.showModal() method -->
-
+      <!-- modal 1 -->
       <dialog id="my_modal_1" class="modal">
         <div class="modal-box">
-          <h3 class="text-lg font-bold">Congratulations!</h3>
-          <p class="py-4">Donation Complete</p>
+          <h3 class="text-lg font-bold">Invalid!</h3>
+          <p class="py-4">Give valid amount</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- modal 2 -->
+      <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Insufficient balance!</h3>
+          <p class="py-4">Can't donate more than balance</p>
           <div class="modal-action">
             <form method="dialog">
               <!-- if there is a button in form, it will close the modal -->
