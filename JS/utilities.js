@@ -5,7 +5,3 @@ function displayHide(id) {
     document.getElementById("blog-container").classList.add("hidden")
     document.getElementById(id).classList.remove("hidden")
 }
-// button color
-function buttonColor(id) {
-
-}
