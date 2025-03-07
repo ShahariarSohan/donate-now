@@ -47,25 +47,25 @@
     </style>
   </head>
   <body class="lexend">
-    <header class="sticky top-0 z-10">
+    <header class="lg:sticky top-0 z-10">
       <!-- navbar start -->
-      <nav">
-        <div class="navbar bg-[#F9F7F3] p-10">
-          <div class="navbar-start">
+      <nav>
+        <div class="navbar bg-[#F9F7F3] p-10 flex-col md:flex-row">
+          <div class="md:navbar-start">
             <div>
               <button class="btn bg-lime-300">Blog</button>
             </div>
           </div>
-          <div class="navbar-center space-x-3">
+          <div class="md:navbar-center space-x-3">
             <div>
-              <img src="assets/logo.png" alt="" />
+              <img src="assets/logo.png" alt="" class="mx-auto" />
             </div>
             <h2 class="text-2xl font-bold">Donation Bangladesh</h2>
           </div>
           <div class="navbar-end space-x-2">
             <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
             <h3 class="text-xl font-bold text-slate-400">
-              <span>5500</span>BDT
+              <span id="donation-balance">5500</span>BDT
             </h3>
           </div>
         </div>
@@ -80,116 +80,177 @@
       </nav>
       <!-- navbar end -->
     </header>
-    <main class="max-w-screen-xl mx-auto space-y-20">
-      <!-- donation container 1-->
-      <div class="flex items-center">
-        <!--fund image -->
-        <div class="flex-1">
-          <img src="assets/noakhali.png" alt="" />
-        </div>
-        <!--fund content -->
-        <div class="text-start flex-1 space-y-4">
-          <!-- fund balance -->
-          <div class="flex space-x-2">
-            <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
-            <h3 class="text-xl font-bold text-slate-400"><span>0</span>BDT</h3>
+    <main class="max-w-screen-xl mx-auto space-y-20 p-10 lg:p-0">
+      <!-- donation container -->
+      <div id="donation-container" class="space-y-20">
+        <!-- donation container 1-->
+        <div class="flex flex-col lg:flex-row items-center">
+          <!--fund image -->
+          <div class="flex-1">
+            <img src="assets/noakhali.png" alt="" />
           </div>
-          <h1 class="font-bold text-2xl">
-            Donate for Flood at Noakhali, Bangladesh
-          </h1>
-          <p class="text-slate-400 text-justify">
-            The recent floods in Noakhali have caused significant damage to
-            homes infrastructure. Your donation will help provide essential
-            supplies and to those affected by this disaster. Every contribution,
-            big or small, makes difference. Please join us in supporting the
-            relief efforts and making a positive impact on the lives of those in
-            need.
-          </p>
-          <fieldset class="fieldset ">
-            <input
-              type="text"
-              class="input w-full"
-              placeholder="Write your donation"
-            />
-          </fieldset>
-          <button class="btn bg-lime-300 w-full">Donate Now</button>
+          <!--fund content -->
+          <div class="text-start flex-1 space-y-4">
+            <!-- fund balance -->
+            <div class="flex space-x-2">
+              <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
+              <h3 class="text-xl font-bold text-slate-400">
+                <span id="donation-fund-noakhali">0</span>BDT
+              </h3>
+            </div>
+            <h1 class="font-bold text-2xl">
+              Donate for Flood at Noakhali, Bangladesh
+            </h1>
+            <p class="text-slate-400 text-justify">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <fieldset class="fieldset">
+              <input
+                id="donation-noakhali"
+                type="text"
+                class="input w-full"
+                placeholder="Write your donation"
+              />
+            </fieldset>
+            <button class="btn bg-lime-300 w-full">Donate Now</button>
+          </div>
+        </div>
+        <!-- donation container 2-->
+        <div class="flex flex-col lg:flex-row items-center">
+          <!--fund image -->
+          <div class="flex-1">
+            <img src="assets/feni.png" alt="" />
+          </div>
+          <!--fund content -->
+          <div class="text-start flex-1 space-y-4">
+            <!-- fund balance -->
+            <div class="flex space-x-2">
+              <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
+              <h3 class="text-xl font-bold text-slate-400">
+                <span id="donation-fund-feni">500</span>BDT
+              </h3>
+            </div>
+            <h1 class="font-bold text-2xl">
+              Donate for Flood at Feni, Bangladesh
+            </h1>
+            <p class="text-slate-400 text-justify">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+            <fieldset class="fieldset">
+              <input
+                id="donation-feni"
+                type="text"
+                class="input w-full"
+                placeholder="Write your donation"
+              />
+            </fieldset>
+            <button class="btn bg-lime-300 w-full">Donate Now</button>
+          </div>
+        </div>
+        <!-- donation container 3-->
+        <div class="flex flex-col lg:flex-row items-center">
+          <!--fund image -->
+          <div class="flex-1">
+            <img src="assets/quota-protest.png" alt="" />
+          </div>
+          <!--fund content -->
+          <div class="text-start flex-1 space-y-4">
+            <!-- fund balance -->
+            <div class="flex space-x-2">
+              <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
+              <h3 class="text-xl font-bold text-slate-400">
+                <span class="donation-fund-quota">600</span>BDT
+              </h3>
+            </div>
+            <h1 class="font-bold text-2xl">
+              Aid for Injured in the Quota Movement
+            </h1>
+            <p class="text-slate-400 text-justify">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <fieldset class="fieldset">
+              <input
+                id="donation-quota"
+                type="text"
+                class="input w-full"
+                placeholder="Write your donation"
+              />
+            </fieldset>
+            <button class="btn bg-lime-300 w-full">Donate Now</button>
+          </div>
         </div>
       </div>
-      <!-- donation container 2-->
-      <div class="flex items-center">
-        <!--fund image -->
-        <div class="flex-1">
-          <img src="assets/feni.png" alt="" />
-        </div>
-        <!--fund content -->
-        <div class="text-start flex-1 space-y-4">
-          <!-- fund balance -->
-          <div class="flex space-x-2">
-            <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
-            <h3 class="text-xl font-bold text-slate-400">
-              <span>500</span>BDT
-            </h3>
+      <!-- history container -->
+      <div id="history-container" class="hidden"></div>
+      <!-- blog container -->
+      <div
+        id="blog-container"
+        class="hidden max-w-screen-lg mx-auto space-y-5 my-10"
+      >
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow bg-base-100 border-base-300 border"
+        >
+          <div class="collapse-title font-semibold text-xl">
+            What Dom represents?
           </div>
-          <h1 class="font-bold text-2xl">
-            Donate for Flood at Feni, Bangladesh
-          </h1>
-          <p class="text-slate-400 text-justify">
-            The recent floods in Feni have devastated local communities, leading
-            to severe disruption and loss. Your generous donation will help
-            provide immediate aid, including food, clean water, and medical
-            supplies, to those affected by this calamity. Together, we can offer
-            crucial support and help rebuild lives in the aftermath of this
-            disaster. Every contribution counts towards making a real
-            difference. Please consider donating today to assist those in urgent
-            need.
-          </p>
-          <fieldset class="fieldset">
-            <input
-              type="text"
-              class="input w-full"
-              placeholder="Write your donation"
-            />
-          </fieldset>
-          <button class="btn bg-lime-300 w-full">Donate Now</button>
-        </div>
-      </div>
-      <!-- donation container 3-->
-      <div class="flex items-center">
-        <!--fund image -->
-        <div class="flex-1">
-          <img src="assets/quota-protest.png" alt="" />
-        </div>
-        <!--fund content -->
-        <div class="text-start flex-1 space-y-4">
-          <!-- fund balance -->
-          <div class="flex space-x-2">
-            <i class="fa-solid fa-dollar-sign text-orange-500 text-2xl"></i>
-            <h3 class="text-xl font-bold text-slate-400">
-              <span>600</span>BDT
-            </h3>
+          <div class="collapse-content text-md">
+            Dom means document object model.It help us to control and html and
+            css file via javascript
           </div>
-          <h1 class="font-bold text-2xl">
-            Aid for Injured in the Quota Movement
-          </h1>
-          <p class="text-slate-400 text-justify">
-            The recent Quota movement has resulted in numerous injuries and
-            significant hardship for many individuals. Your support is crucial
-            in providing medical assistance, rehabilitation, and necessary
-            supplies to those affected. By contributing, you help ensure that
-            injured individuals receive the care and support they need during
-            this challenging time. Every donation plays a vital role in
-            alleviating their suffering and aiding in their recovery. Please
-            consider making a donation to support these brave individuals in
-            their time of need.
-          </p>
-          <fieldset class="fieldset">
-            <input
-              type="text"
-              class="input w-full"
-              placeholder="Write your donation"
-            />
-          </fieldset>
-          <button class="btn bg-lime-300 w-full">Donate Now</button>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow bg-base-100 border-base-300 border"
+        >
+          <div class="collapse-title font-semibold text-xl">
+            What is javascript?
+          </div>
+          <div class="collapse-content text-md">
+            Javascript is high level programming language.It easy,convenient
+            user friendly.Make a website without javascript is concedered to be
+            a dead one.
+          </div>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow bg-base-100 border-base-300 border"
+        >
+          <div class="collapse-title font-semibold text-xl">What is Dom?</div>
+          <div class="collapse-content text-md">
+            Dom means document object model.It help us to control and html and
+            css file via javascript
+          </div>
+        </div>
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow bg-base-100 border-base-300 border"
+        >
+          <div class="collapse-title font-semibold text-xl">What is Dom?</div>
+          <div class="collapse-content text-md">
+            Dom means document object model.It help us to control and html and
+            css file via javascript
+          </div>
         </div>
       </div>
     </main>
