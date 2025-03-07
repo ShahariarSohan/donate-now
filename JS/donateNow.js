@@ -1,3 +1,4 @@
+//donate now button 
 function handleDonate(data) {
     const donationAmount = parseFloat(data.previousElementSibling.children[0].value)
     data.previousElementSibling.children[0].value = "";
@@ -18,7 +19,6 @@ function handleDonate(data) {
             const presentBalance = donationBalance - donationAmount;
             balance.innerText = presentBalance;
         }
-
     }
 }
 
