@@ -1,6 +1,7 @@
-// input value
-function getValueById(id) {
-    const amount = parseFloat(document.getElementById(id).value);
-    document.getElementById(id).value = "";
-    return amount;
+// display hide
+function displayHide(id) {
+    document.getElementById("donation-container").classList.add("hidden")
+    document.getElementById("history-container").classList.add("hidden")
+    document.getElementById("blog-container").classList.add("hidden")
+    document.getElementById(id).classList.remove("hidden")
 }

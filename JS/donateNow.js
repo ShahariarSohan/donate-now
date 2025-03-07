@@ -18,6 +18,7 @@ function handleDonate(data) {
             donated.innerText = totalDonation;
             const presentBalance = donationBalance - donationAmount;
             balance.innerText = presentBalance;
+            return my_modal_3.showModal();
         }
     }
 }
