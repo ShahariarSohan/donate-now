@@ -22,4 +22,8 @@ function handleDonate(data) {
         }
     }
 }
+// donation button features
+function handleDonation(data) {
+    displayHide("donation-container")
+}
 

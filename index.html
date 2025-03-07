@@ -53,7 +53,9 @@
         <div class="navbar bg-[#F9F7F3] p-10 flex-col md:flex-row">
           <div class="md:navbar-start">
             <div>
-              <button class="btn bg-lime-300">Blog</button>
+              <button onClick="handleBlog(this)" class="btn bg-lime-300">
+                Blog
+              </button>
             </div>
           </div>
           <div class="navbar-center space-x-3">
@@ -71,10 +73,17 @@
         </div>
         <div class="flex justify-center items-center p-10 gap-3 bg-white">
           <div>
-            <button class="btn hover:bg-lime-300">Donation</button>
+            <button
+              onClick="handleDonation(this)"
+              class="btn hover:bg-lime-300"
+            >
+              Donation
+            </button>
           </div>
           <div>
-            <button class="btn hover:bg-lime-300">History</button>
+            <button onClick="handleHistory(this)" class="btn hover:bg-lime-300">
+              History
+            </button>
           </div>
         </div>
       </nav>
@@ -310,7 +319,8 @@
       </dialog>
     </main>
     <footer></footer>
-
+    <script src="JS/blog.js"></script>
+    <script src="JS/history.js"></script>
     <script src="JS/utilities.js"></script>
     <script src="JS/donateNow.js"></script>
   </body>
